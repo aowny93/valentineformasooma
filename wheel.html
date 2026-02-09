@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spin the Wheel 💝</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Spin to reveal your surprise 💖</h1>
+
+<button onclick="spinWheel()">Spin</button>
+
+<h2 id="result"></h2>
+
+<script>
+function spinWheel(){
+    const gifts = [
+        "Chocolate 🍫",
+        "Long Call ☎️",
+        "Love Letter 💌",
+        "Movie Night 🎬",
+        "Flowers 🌹",
+        "Special Gift 🎁"
+    ];
+
+    let random = Math.floor(Math.random() * gifts.length);
+
+    document.getElementById("result").innerHTML =
+    "You got: " + gifts[random] +
+    "<br><br>But actually… you unlocked something much bigger ❤️";
+
+    setTimeout(()=>{
+        window.location.href="quiz.html";
+    },4000);
+}
+</script>
+
+</body>
+</html>
