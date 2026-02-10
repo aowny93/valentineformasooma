@@ -94,10 +94,27 @@ p {
   max-width: 90%;
   margin: 20px auto;
 }
+
+/* Music buttons */
+button.music-btn {
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
 </style>
 </head>
 
 <body>
+
+<!-- Autoplay Valentine music -->
+<audio id="valentineAudio" autoplay loop>
+  <source src="valentine.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 <h1>Final Level Unlocked ❤️</h1>
 
@@ -111,13 +128,11 @@ p {
 
 <h2>Your 14 February Plan</h2>
 
-<p>🌹 Morning: A beautiful flower bouquet delivered just for you</p>
+<p>🌹 Morning: Buy a beautiful bouquet for yourself — from my heart to yours 💖</p>
 
-<p>🍽️ Lunch Date: Raya Restaurant, Lahore — enjoy a romantic meal while thinking of me</p>
+<p>🍽️ Lunch Date: Meet Me in Paris Café, DHA Raya — enjoy a romantic meal thinking of me</p>
 
-<p>☕ Coffee Time: Costa Coffee — imagine us sipping together, laughing, talking</p>
-
-<p>📸 Evening: Meet Me in Paris Café — take pictures and create memories for us</p>
+<p>☕ Coffee Time: Costa Coffee — sip your favorite drink and imagine us together</p>
 
 <hr>
 
@@ -134,6 +149,12 @@ p {
 not two hearts ❤️</h2>
 
 <h2>Happy Valentine’s Day, My Love 💖</h2>
+
+<!-- Music control buttons -->
+<div style="text-align:center;">
+<button class="music-btn" onclick="document.getElementById('valentineAudio').pause()">🔇 Mute</button>
+<button class="music-btn" onclick="document.getElementById('valentineAudio').play()">🎵 Play</button>
+</div>
 
 </div>
 
